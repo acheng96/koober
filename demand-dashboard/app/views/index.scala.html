@@ -12,7 +12,7 @@
             }
 
             /* Header */
-            
+
             .header {
               display: inline-block;
               width: 100%;
@@ -32,6 +32,8 @@
 
             #logo-title img {
               margin: auto 10px auto 0;
+              width: 50px;
+              height: auto;
             }
 
             #dashboard-title {
@@ -80,8 +82,8 @@
             .form-field-icon img {
               position: absolute;
               margin: auto;
-              width: 30px;
-              height: 30px;
+              width: auto;
+              height: 24px;
               top:0;
               right: 0;
               bottom:0;
@@ -203,7 +205,7 @@
     <body>
         <div class="header">
             <div id="logo-title">
-                <img src="" alt="logo" style="width:50px;height:50px;">
+                <img src="../assets/KooberLogo.png" alt="logo">
                 <h1>Koober</h1>
             </div>
             <div id="dashboard-title">
@@ -216,7 +218,7 @@
             <div id="form-container">
               <div id="date-field" class="form-field">
                 <div class="form-field-icon">
-                  <img src="" alt="date">
+                  <img src="../assets/DateIcon.png" alt="date">
                 </div>
                 <select id="date-select" name="dateSelect" required title="Choose a date!">
                   <option selected="selected" value>Date</option>
@@ -224,7 +226,7 @@
               </div>
               <div id="time-field" class="form-field">
                 <div class="form-field-icon">
-                  <img src="" alt="time">
+                  <img src="../assets/TimeIcon.png" alt="time">
                 </div>
                 <select id="hour-select" name="hourSelect" required title="Choose a time!">
                   <option selected="selected" value>HH</option>
@@ -239,14 +241,14 @@
               </div>
               <div id="location-field" class="form-field">
                 <div class="form-field-icon">
-                  <img src="" alt="location">
+                  <img src="../assets/LocationIcon.png" alt="location">
                 </div>
                 <input id="latitude-field" type="text" placeholder="Latitude" name="latitudeField" required title="Enter a latitude!"><br>
                 <input id="longitude-field" type="text" placeholder="Longitude" name="longitudeField" required title="Enter a longitude!"><br>
               </div>
               <div id="algorithm-field" class="form-field">
                 <div class="form-field-icon">
-                  <img src="" alt="algorithm">
+                  <img src="../assets/AlgorithmIcon.png" alt="algorithm">
                 </div>
                 <select id="algorithm-select" name="algoSelect" required title="Choose an algorithm to use!">
                   <option class="disabled" selected="selected" value>Algorithm</option>
