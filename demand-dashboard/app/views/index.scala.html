@@ -54,6 +54,61 @@
               width: 50%;
             }
 
+            #form-container {
+              margin: auto;
+              width: 300px;
+            }
+
+            .form-field {
+              height: 40px;
+              margin: 10px auto;
+              background-color: #EEEEEE;
+              border-radius: 5px;
+              border: 1px solid #979797;
+            }
+
+            .form-field-icon {
+              position: relative;
+              width: 40px;
+              height: 100%;
+              border-radius: 5px 0 0 5px;
+              border-right: 1px solid #979797;
+              background-color: #D8D8D8;
+            }
+
+            .form-field-icon img {
+              position:absolute;
+              margin: auto;
+              width: 30px;
+              height: 30px;
+              top:0;
+              right: 0;
+              bottom:0;
+              left: 0;
+            }
+
+            .form-button {
+              display: table;
+              margin: 10px auto;
+              text-align: center;
+              width: 150px;
+              height: 40px;
+              border-radius: 5px;
+              border: 1px solid #979797;
+              background-color: #89E1D0;
+            }
+
+            .form-button span {
+              display: table-cell;
+              vertical-align: middle;
+              font-weight: bold;
+              font-size: 20px;
+            }
+
+            .form-button:hover {
+              background-color: #68C8B6;
+            }
+
             /* Display */
 
             #display-view {
@@ -107,6 +162,31 @@
 
         <div class="dashboard">
           <div id="form-view">
+            <div id="form-container">
+              <div id="date-field" class="form-field">
+                <div class="form-field-icon">
+                  <img src="" alt="date">
+                </div>
+              </div>
+              <div id="time-field" class="form-field">
+                <div class="form-field-icon">
+                  <img src="" alt="time">
+                </div>
+              </div>
+              <div id="location-field" class="form-field">
+                <div class="form-field-icon">
+                  <img src="" alt="location">
+                </div>
+              </div>
+              <div id="algorithm-field" class="form-field">
+                <div class="form-field-icon">
+                  <img src="" alt="algorithm">
+                </div>
+              </div>
+              <div class="form-button">
+                <span>Get Demand</span>
+              </div>
+            </div>
           </div>
           <div id="display-view">
             <div id="demand-card">
