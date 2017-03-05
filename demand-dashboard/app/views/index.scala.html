@@ -7,12 +7,12 @@
         <script src="@routes.Assets.versioned("lib/vue/vue.js")"></script>
         <style>
             /* Global */
-            h1, h2, p, span {
+            * {
               font-family: "Avenir Next";
             }
 
             /* Header */
-
+            
             .header {
               display: inline-block;
               width: 100%;
@@ -61,6 +61,7 @@
 
             .form-field {
               height: 40px;
+              width: 100%;
               margin: 10px auto;
               background-color: #EEEEEE;
               border-radius: 5px;
@@ -77,7 +78,7 @@
             }
 
             .form-field-icon img {
-              position:absolute;
+              position: absolute;
               margin: auto;
               width: 30px;
               height: 30px;
@@ -85,6 +86,56 @@
               right: 0;
               bottom:0;
               left: 0;
+            }
+
+            .form-field {
+              display: inline-flex;
+            }
+
+            select {
+              padding-left: 10px;
+              height: 100%;
+              outline: none;
+              -webkit-appearance: none;
+              -webkit-border-radius: 0px;
+              border: none;
+              font-size: 20px;
+              font-weight: 500;
+              background-color: #EEEEEE;
+              color: #A9A9A9;
+            }
+
+            #time-field select {
+              width: 30%;
+            }
+
+            #minute-select {
+              border-left: 1px solid #979797;
+              border-right: 1px solid #979797;
+            }
+
+            #time-select {
+              border-radius: 0 5px 5px 0;
+            }
+
+            #latitude-field, #longitude-field {
+              padding-left: 10px;
+              width: 120px;
+              outline: none;
+              background-color: #EEEEEE;
+              border: none;
+              font-size: 20px;
+              font-weight: 500;
+            }
+
+            #longitude-field {
+              border-left: 1px solid #979797;
+              border-radius: 0 5px 5px 0;
+            }
+
+            #date-select, #algorithm-select {
+              width: 260px;
+              border-radius: 0 5px 5px 0;
             }
 
             .form-button {
@@ -167,21 +218,39 @@
                 <div class="form-field-icon">
                   <img src="" alt="date">
                 </div>
+                <select id="date-select" name="dateSelect" required title="Choose a date!">
+                  <option selected="selected" value>Date</option>
+                </select>
               </div>
               <div id="time-field" class="form-field">
                 <div class="form-field-icon">
                   <img src="" alt="time">
                 </div>
+                <select id="hour-select" name="hourSelect" required title="Choose a time!">
+                  <option selected="selected" value>HH</option>
+                </select>
+                <select id="minute-select" name="minuteSelect" required title="Choose a time!">
+                  <option selected="selected" value>MM</option>
+                </select>
+                <select id="time-select" name="timeSelect" required title="Choose a time!">
+                  <option selected="selected" value>PM</option>
+                  <option value>AM</option>
+                </select>
               </div>
               <div id="location-field" class="form-field">
                 <div class="form-field-icon">
                   <img src="" alt="location">
                 </div>
+                <input id="latitude-field" type="text" placeholder="Latitude" name="latitudeField" required title="Enter a latitude!"><br>
+                <input id="longitude-field" type="text" placeholder="Longitude" name="longitudeField" required title="Enter a longitude!"><br>
               </div>
               <div id="algorithm-field" class="form-field">
                 <div class="form-field-icon">
                   <img src="" alt="algorithm">
                 </div>
+                <select id="algorithm-select" name="algoSelect" required title="Choose an algorithm to use!">
+                  <option class="disabled" selected="selected" value>Algorithm</option>
+                </select>
               </div>
               <div class="form-button">
                 <span>Get Demand</span>
