@@ -6,6 +6,13 @@
         <title>Demand Dashboard</title>
         <script src="@routes.Assets.versioned("lib/vue/vue.js")"></script>
         <style>
+            /* Global */
+            h1, h2, p, span {
+              font-family: "Avenir Next";
+            }
+
+            /* Header */
+
             .header {
               display: inline-block;
               width: 100%;
@@ -14,7 +21,6 @@
             }
 
             .header h1 {
-              font-family: "Avenir Next";
               font-size: 40px;
             }
 
@@ -33,6 +39,59 @@
               margin-right: 30px;
               height: 100%;
             }
+
+            /* Dashboard */
+
+            .dashboard {
+              display: inline-flex;
+              margin-top: 100px;
+              width: 100%;
+            }
+
+            /* Form */
+
+            #form-view {
+              width: 50%;
+            }
+
+            /* Display */
+
+            #display-view {
+              width: 50%;
+            }
+
+            #demand-card {
+              display: block;
+              margin: auto;
+              width: 250px;
+              height: 290px;
+              border-radius: 10px;
+              background-color: #D8D8D8;
+            }
+
+            #demand-card h2 {
+              margin: 0;
+              padding: 15px 0 10px;
+              text-align: center;
+              font-size: 30px;
+            }
+
+            #demand-container {
+              display: table;
+              margin: auto;
+              width: 200px;
+              height: 200px;
+              border-radius: 8px;
+              border: 1px solid #979797;
+              text-align: center;
+              background-color: #EEEEEE;
+            }
+
+            #demand-container span {
+              display: table-cell;
+              vertical-align: middle;
+              font-size: 100px;
+            }
         </style>
     </head>
     <body>
@@ -44,6 +103,19 @@
             <div id="dashboard-title">
                 <h1>Demand Dashboard</h1>
             </div>
+        </div>
+
+        <div class="dashboard">
+          <div id="form-view">
+          </div>
+          <div id="display-view">
+            <div id="demand-card">
+              <h2>Demand</h2>
+              <div id="demand-container">
+                <span>0</span>
+              </div>
+            </div>
+          </div>
         </div>
     </body>
 </html>
