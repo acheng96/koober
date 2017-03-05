@@ -94,30 +94,18 @@
               display: inline-flex;
             }
 
-            select {
+            select, input {
               padding-left: 10px;
-              height: 100%;
+              width: 260px;
               outline: none;
               -webkit-appearance: none;
               -webkit-border-radius: 0px;
               border: none;
+              border-radius: 0 5px 5px 0;
               font-size: 20px;
               font-weight: 500;
               background-color: #EEEEEE;
               color: #A9A9A9;
-            }
-
-            #time-field select {
-              width: 30%;
-            }
-
-            #minute-select {
-              border-left: 1px solid #979797;
-              border-right: 1px solid #979797;
-            }
-
-            #time-select {
-              border-radius: 0 5px 5px 0;
             }
 
             #latitude-field, #longitude-field {
@@ -132,11 +120,6 @@
 
             #longitude-field {
               border-left: 1px solid #979797;
-              border-radius: 0 5px 5px 0;
-            }
-
-            #date-select, #algorithm-select {
-              width: 260px;
               border-radius: 0 5px 5px 0;
             }
 
@@ -220,24 +203,13 @@
                 <div class="form-field-icon">
                   <img src="../assets/DateIcon.png" alt="date">
                 </div>
-                <select id="date-select" name="dateSelect" required title="Choose a date!">
-                  <option selected="selected" value>Date</option>
-                </select>
+                <input id="date-select" type="date" name="dateSelect">
               </div>
               <div id="time-field" class="form-field">
                 <div class="form-field-icon">
                   <img src="../assets/TimeIcon.png" alt="time">
                 </div>
-                <select id="hour-select" name="hourSelect" required title="Choose a time!">
-                  <option selected="selected" value>HH</option>
-                </select>
-                <select id="minute-select" name="minuteSelect" required title="Choose a time!">
-                  <option selected="selected" value>MM</option>
-                </select>
-                <select id="time-select" name="timeSelect" required title="Choose a time!">
-                  <option selected="selected" value>PM</option>
-                  <option value>AM</option>
-                </select>
+                <input id="time-select" type="time" name="timeSelect">
               </div>
               <div id="location-field" class="form-field">
                 <div class="form-field-icon">
